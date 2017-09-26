@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+}
+
+.logo {
+  margin: auto;
+  display: block;
+  height: 120px;
+}

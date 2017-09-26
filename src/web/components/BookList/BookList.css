@@ -1,0 +1,42 @@
+.bookListContainer {
+  margin-left: 20px;
+  width: 261px;
+  height: 455px;
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+
+.bookRow {
+  height: 100px;
+  border-bottom: 1px solid #cccccc;
+  padding: 10px;
+}
+
+.loadingImage {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+.wrapper {
+  width: 301px;
+  height: 636px;
+  padding-top: 80px;
+  background: url('../../styles/img/phone.png') no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+}
+
+.genderIcon {
+  height: 17px;
+  width: 17px;
+  margin-right: 5px;
+}
+
+.label {
+  margin-right: 5px;
+}

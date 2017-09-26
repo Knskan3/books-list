@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BookList /> Snapshot sould be correct 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className={undefined}
+    id="scroller"
+  >
+    <div
+      className={undefined}
+    >
+      <div>
+        <img
+          alt="loading"
+          className={undefined}
+          src={Object {}}
+        />
+      </div>
+    </div>
+    <div
+      className={undefined}
+    >
+      <div>
+        <img
+          alt="loading"
+          className={undefined}
+          src={Object {}}
+        />
+      </div>
+    </div>
+    <div
+      className=""
+    >
+      <div
+        className={undefined}
+      >
+        No Results :(
+      </div>
+    </div>
+  </div>
+</div>
+`;
