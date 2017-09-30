@@ -1,5 +1,7 @@
 ## Scrollable Book List ##
 
+![Interface](screenshots/interface.png "Interface")
+
 ## Install
 
 - Clone (or download) this repository
@@ -26,9 +28,8 @@ The mongoDB is pre populated but you can allways do it again.
 
   BatchSize is Clamped [1,300].
   
-  This will take a few minutes :D.
-
-!!Both will remove all the bocks before generating
+  This will take a few minutes :D. (Running the generator will first remove all the books before generating. Be advised removing the 1m books will leave the server block for a while).
+  
 
 ## Local Development Environment
 
@@ -40,8 +41,11 @@ Note the site port is different now and that you will need a terminal per proces
 1. Run: `yarn local` (Site available at `http://localhost:3000/`)
 2. Run: `yarn server` (Server running at `http://localhost:4000/`) (CORS enabled :D)
 
+## Tasks implemented:
 
-(You could also use `npm`)
+* [x] Generate a list of one million books. (including a generator, a some other modules)
+* [x] Display a scrollable list of all one million books. Infinite loading style. Removing not needed elements during scroll (both directions).
+* [x] Extra functionality
 
 ## Extra tasks implemented:
 
@@ -65,7 +69,7 @@ Note the site port is different now and that you will need a terminal per proces
 * A infinite scroll (lazy loading as we scroll down) might be a good starting point. 
 
     The problem is that if we scroll too far we would be anyway loading the 1m results (sub optimal). 
-    We would need to be removing previous results and recalculating the scroll as we go to avoid crazy jumps.
+    We would need to be removing previous results and recalculating the scroll as we go to avoid crazy jumps. This applies to both directions.
 
 * Potential issues of this implementation (not being covered):
     * Window resizing could break the application, forcing us to recalculate. (I'll be using a fix size box for the list container).
