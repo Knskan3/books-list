@@ -8,6 +8,7 @@ import styles from './BookList.css';
 import loadingImage from '../../styles/img/loading.gif';
 import maleIcon from '../../styles/img/male.png';
 import femaleIcon from '../../styles/img/female.png';
+import config from '../../config';
 
 /**
  * Describes the BookList react component
@@ -22,8 +23,8 @@ class BookList extends Component {
    */
   constructor(props) {
     super(props);
-    this.bottomTreshold = 70;
-    this.topTreshold = 30;
+    this.bottomTreshold = config.scroll.bottomTreshold;
+    this.topTreshold = config.scroll.topTreshold;
     this.props.bookRequest({ reset: true });
   }
 

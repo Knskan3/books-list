@@ -3,6 +3,7 @@ import {
   BOOKS_REQUEST_COMPLETED,
   BOOKS_LOADING_CHANGE,
 } from '../constants';
+import config from '../config';
 
 /**
  * Default App state, used at start
@@ -15,7 +16,6 @@ const defaultState = {
   total: 0, // in db without filter
   loading: true,
   loadingBackwards: false,
-  batchSize: 150,
 };
 
 /**
@@ -34,9 +34,9 @@ const appendBooksToState = (state, action) => {
   let newFirst = state.first;
 
   // remove from start
-  if (newStack.length >= state.batchSize * 3) {
-    newStack = newStack.slice(state.batchSize, newStack.length);
-    newFirst += state.batchSize;
+  if (newStack.length >= config.books.maxConcurrent) {
+    newStack = newStack.slice(config.books.batchSize, newStack.length);
+    newFirst += config.books.batchSize;
   }
 
   return {
@@ -64,9 +64,9 @@ const prependBooksToState = (state, action) => {
   let newLast = state.last;
 
   // remove from end
-  if (newStack.length >= state.batchSize * 3) {
-    newStack = newStack.slice(0, newStack.length - state.batchSize);
-    newLast -= state.batchSize;
+  if (newStack.length >= config.books.maxConcurrent) {
+    newStack = newStack.slice(0, newStack.length - config.books.batchSize);
+    newLast -= config.books.batchSize;
   }
 
   return {

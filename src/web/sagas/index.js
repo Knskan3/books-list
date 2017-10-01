@@ -18,7 +18,9 @@ import {
   orderStateSelector,
 } from '../selectors';
 
-const mongoBaseURL = 'http://localhost:4000/books/';
+import config from '../config';
+
+const mongoBaseURL = config.db.baseURL;
 
 /**
  * Composes the URL to fetch books from database.
@@ -53,8 +55,8 @@ function* getStateForRequest(backwards) {
   const sort = yield select(sortStateSelector);
   const order = yield select(orderStateSelector);
   return {
-    skip: backwards ? books.first - books.batchSize : books.last,
-    limit: books.batchSize,
+    skip: backwards ? books.first - config.books.batchSize : books.last,
+    limit: config.books.batchSize,
     filters,
     sort,
     order,

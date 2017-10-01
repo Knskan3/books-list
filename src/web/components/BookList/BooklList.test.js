@@ -33,7 +33,6 @@ const defaultBookState = {
   total: 0, // in db without filter
   loading: false,
   loadingBackwards: false,
-  batchSize: 150,
 };
 /* eslint-disable */
 
