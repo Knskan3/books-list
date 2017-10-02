@@ -12,8 +12,6 @@ Good to know:
 - Made with `v6.11.3` please download if needed.
 - Using `babel-node` to transpile the code in real time and get ES6 features for nodejs.
 
-(You could also use `npm`)
-
 
 ## Run the application (express server)
 
